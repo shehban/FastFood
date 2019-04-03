@@ -1,0 +1,91 @@
+body {
+    background-color: #dedeeb;
+    /* background-image: url('./map-waterloo.png'); */
+    background-repeat: no-repeat;
+}
+
+.row li {
+    list-style: none;
+}
+
+.container {
+    width: 95%;
+}
+
+.quantity {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+ .product a{
+    font-size: 1em;
+}
+
+.product li {
+    text-decoration: none;
+}
+
+.total {
+    color: transparent; 
+}
+
+.jumbotron {
+    background-image: url('./icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    margin-top: 2%;
+}
+
+.btn-success {
+    background-color: #c92828;
+    border: #c92828;
+    color: black;   
+}
+
+.jumbotron h1 {
+    color: transparent;
+}
+
+a {
+    font-size: 2em;
+    padding: 1%;
+    color: #c92828;
+}
+
+.fa {
+    color:#c92828;
+}
+
+.empty {
+    margin: 10%;
+}
+
+.navbar {
+    margin-bottom: 3%;
+    font-size: 1.2em;
+}
+
+.login {
+    background-color: green;
+}
+
+.product {
+    background-color: #1a1a1d;
+    color: #c92828;
+    margin: 2%;
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+.footer {
+    padding: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron {
+        color: white;
+    }
+  }
