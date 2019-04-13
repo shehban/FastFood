@@ -26,6 +26,9 @@
     },
     "dependencies": {
         "google-maps-react": "^2.0.2",
+        "ngx-google-places-autocomplete": "^2.0.3",
+        "react-google-autocomplete": "^1.0.18",
+        "react-places-autocomplete": "^7.2.1",
         "react-router-dom": "^5.0.0"
     }
 }

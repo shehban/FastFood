@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { get } from 'http';
 import './styles.css';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import Cart from './Cart';
 
 export default class ProductListing extends Component {

@@ -8,13 +8,12 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="/css/app.css" type="text/css" rel="stylesheet">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNX8JajMOFizPrqQ3soycokrIoe8dXswE&libraries=places&language=en"></script>
+
     </head>
     <body>
-      <div id="header">
-      </div>      
+      <div id="header"></div>      
       <div id="navigation">
-    <ul class="navbar-nav ml-auto float-right">
+        <ul class="navbar-nav ml-auto float-right">
                         <!-- Authentication Links -->
                         @guest
                         <div class="row">
@@ -48,13 +47,28 @@
                         @endguest
                     </ul></div>
       <div id="body">
+      @guest
+                        <div class="row">
+                            <li class="nav-item col-sm-6">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item col-sm-6">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                                </div>
+                            @endif
+                        @else
+                            
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
       </div>
+        
       <div id="example"></div>
       <div id="footer"></div>
-      <script>
-    let globalData = {!! $globalData->toJson() !!};
-    </script>
     </body>
     <script src="/js/app.js"></script>
-   
 </html>

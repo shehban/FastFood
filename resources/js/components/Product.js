@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { get } from 'http';
 import './styles.css';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {HashRouter as Router, Link, Route} from 'react-router-dom';
 
 export default class Product extends Component {
     constructor() {
@@ -25,7 +25,7 @@ export default class Product extends Component {
         return (
             <div className="container">
             <div className="row justify-content-center">
-               {this.state.products.map(product => <li className="text-center col-md-5 product justify-content-center"><img className="img-fluid" src={product.image}></img> {product.productname}<br />  ${product.price}<br />
+               {this.state.products.map(product => <li key={product.id} className="text-center col-md-5 product justify-content-center"><img className="img-fluid" src={product.image}></img> {product.productname}<br />  ${product.price}<br />
                 <Link to={"/product/" + product.id}>
                <button className="btn-success">Buy Now</button>
                </Link>

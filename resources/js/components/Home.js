@@ -3,11 +3,14 @@ import './styles.css';
 
 export default class Home extends React.Component {
   render() {
+    // var object = globalData;
+    // var userdetails = Object.values(object);
     return (
     <div>
-    
+      {/* {userdetails.map(product => <li key={product.id} className="text-center col-md-5 product justify-content-center">{product.name}{product.id} {product.email}
+                </li>
+               )} */}
     <h2 className="text-center">Our Delivery Area</h2>
-    
     <img className="img-fluid" src="./images/map-waterloo.png"></img>
     <div className="empty"></div>
     <div className="text-center">

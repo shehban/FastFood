@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 
-class HomeController extends Controller
+class OrderController extends Controller
 {
-    /**
+     /**
      * Create a new controller instance.
      *
      * @return void
@@ -17,16 +17,16 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function checkLogin() {
+        
+    }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    { 
-        return view('welcome')->with(["globalData" => collect([
-           'user' => Auth::user()
-        ])
-        ]);
+    {
+        return view('order');
     }
 }
