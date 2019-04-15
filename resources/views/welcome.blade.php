@@ -8,7 +8,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="/css/app.css" type="text/css" rel="stylesheet">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNX8JajMOFizPrqQ3soycokrIoe8dXswE&libraries=places&language=en"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNX8JajMOFizPrqQ3soycokrIoe8dXswE&libraries=geometry,drawing,places&language=en"></script>
     </head>
     <body>
       <div id="header">

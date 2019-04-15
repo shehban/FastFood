@@ -22,7 +22,8 @@ export default class Order extends React.Component {
             Address:'',
             productid: '',
             quantity: '',
-            latlng: []
+            lat: '',
+            lng: ''
         }
         this.Address = this.Address.bind(this);
         this.name = this.name.bind(this);
@@ -57,13 +58,15 @@ export default class Order extends React.Component {
     }
 
     geocode() {
-        axios.get('http://127.0.0.1:8080/api/location').then(response => {
-            // this.setState({
-            //     latlng: response.data
-            // }).catch(errors => {
-            //     console.log(errors);
-            // })
-            console.log(response.data.results[0].geometry.location); 
+        axios.get("/api/location/" + this.state.Address.replace(/ /g, '+')).then(response => {
+            this.setState({
+                lat: response.data.results[0].geometry.location.lat,
+                lng: response.data.results[0].geometry.location.lng
+            });
+            console.log(this.state)            
+            }).catch(errors => {
+                console.log(errors);
+            console.log(response.data.results[0].geometry.location.lat); 
         })
     }
 
@@ -85,19 +88,17 @@ export default class Order extends React.Component {
         }).then(error => {
             console.log(error);
         });
-        axios.post('/api/orderitems', this.state).then(response => {
-            console.log(response);
-        }).then(error => {
-            console.log(error);
-        });
     }
-    
+  
   render() {
     var object = this.state.cartp;
     var user = globalData;
     var userdetails = Object.values(user);
     var justTheProducts = Object.values(object);
     var subtotal, total = 0;
+    var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(43.3477, -80.2032),
+        new google.maps.LatLng(43.4814, -80.6149));
     return (
         <div className="container justify-content-center">
              <div className="container justify-content-center">
@@ -111,7 +112,6 @@ export default class Order extends React.Component {
                </div>
                </div>
             <h1>Order Page</h1>
-            {console.log(parseInt(justTheProducts.map(product => product.id)))}
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group row">
                 <label className="label col-sm-2">Name: </label>
@@ -121,19 +121,19 @@ export default class Order extends React.Component {
                 <input className="col-sm-4" type="number" name="tel" onChange={this.Phone} value={this.state.Phone}></input></div>
                 <div className="form-group row">
                 <p className="col-sm-2">Address: &nbsp;</p>
-                {/* var defaultBounds = new google.maps.LatLngBounds(
-                    new google.maps.LatLng(-33.8902, 151.1759),
-                    new google.maps.LatLng(-33.8474, 151.2631)); */}
                 <Autocomplete
     style={{width: '100%'}}
     onPlaceSelected={(place) => {
         this.Address(place.formatted_address,userdetails[0].id)
         this.productdetails((parseInt(justTheProducts.map(product => product.id))),(parseInt(justTheProducts.map(product => product.quantity))));
         this.geocode()
-        console.log(this.state)
     }}
     types={['address']}
     componentRestrictions={{country: "ca"}}
+    bounds={new google.maps.LatLngBounds(
+        new google.maps.LatLng(43.3741,-80.5966),
+        new google.maps.LatLng(43.5070,-80.2823)
+    )}
     className="col-sm-4"
 />
 </div>

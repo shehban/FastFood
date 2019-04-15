@@ -37,6 +37,7 @@ export default class Cart extends Component {
         axios.get('http://127.0.0.1:8080/clear').then(res=>{
             console.log(res.data);
         });
+        location.reload()
     }
 
 
@@ -45,11 +46,12 @@ export default class Cart extends Component {
         var object = this.state.cartp;
         var justTheProducts = Object.values(object);
         var subtotal, total = 0;
-        if(justTheProducts != null){
+        console.log(object)
+        if(object.length != 0){
             return (
                 <div className="container justify-content-center">
                <div className="row">
-               {justTheProducts.map(product => <li className="text-center col-md-5 product justify-content-center"><img className="img-fluid" src={product.image}></img> {product.name}<br />  ${product.price}<br />Quantity: {product.quantity}<br></br>Subtotal: ${subtotal = product.price * product.quantity}
+               {justTheProducts.map(product => <li key={product.name} className="text-center col-md-5 product justify-content-center"><img className="img-fluid" src={product.image}></img> {product.name}<br />  ${product.price}<br />Quantity: {product.quantity}<br></br>Subtotal: ${subtotal = product.price * product.quantity}
                <p id="total" className="total">{(total = total + subtotal).toFixed(2)}</p>
                 </li>
                )}
@@ -61,14 +63,21 @@ export default class Cart extends Component {
                <form className="form" method="post">
                <input type="hidden" name="productid" value={product.id}></input>
                <input type="hidden" name="productid" value={product.quantity}></input>
-               <Link to="/order"><button className="btn btn-success" type="submit">Place My Order</button>
-                </Link>
-               <br></br></form>
+               </form>
                )}
-               <button className="btn btn-success" onClick={this.empty}>Empty Cart</button>
-               {/* </Link> */}
+               <div className="row">
+               <Link to="/order" className="btn btn-success col-sm-2">Place My Order
+                </Link>
+                <div className="col-sm-1"></div>
+               <button className="btn btn-success col-sm-2" onClick={this.empty}>Empty Cart</button>
+               </div>
                 </div>
             );   
+        }
+        else {
+            return(
+                <h1 className="text-center text-info">Your cart is empty</h1>
+            );
         }
     }
 }

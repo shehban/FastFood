@@ -30,6 +30,7 @@ export default class ProductListing extends Component {
             id: this.state.id
         }).then(res=>{
             console.log(res.data);
+            location.reload()
         });
     }
 
@@ -48,7 +49,7 @@ export default class ProductListing extends Component {
         <h5 className="col-md-12">$ {this.state.post.price}</h5>
         <input type="number" onChange={(e) => {this.quantity(this.state.post.id,e)}} min="1" max="10" className="form-control quantity" placeholder="Quantity"></input>
         <br></br>
-        <button className="btn btn-success" type="submit" >Add to Cart</button>
+        <button className="btn btn-success" type="submit">Add to Cart</button>
         </form>
         <Cart></Cart>
         </div>

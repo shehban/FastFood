@@ -18,6 +18,8 @@
 //     return view('welcome');
 // });
 
+Route::get('order/location', 'Api\OrderController@getorderlocations');
+
 Route::get('products', function() {
     return App\product::all();
 });

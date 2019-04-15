@@ -22,12 +22,19 @@ class OrderController extends Controller
         ->join('users','users.id','=','orders.user_id')
         ->join('products','products.id','=','order_items.productid')
         ->select('orders.address','orders.phone','users.name','products.productname','order_items.quantity')
+        ->where('delivered','=','false')
         ->get();
         return response()->json($orders);
     }
 
-    public function getorders() {
-        
+    public function getorderlocations() {
+        $orderlocation =  DB::table('orders')
+        ->join('users','orders.user_id','=','users.id')
+        ->select('orders.id','orders.address','orders.phone','users.name','orders.latitude','orders.longitude')
+        ->where('latitude','!=',0)
+        ->where('delivered','=','false')
+        ->get();
+        return response()->json($orderlocation);   
     }
 
     /**
@@ -52,6 +59,8 @@ class OrderController extends Controller
         $order->user_id = $request->get('userid');
         $order->address = $request->get('Address');
         $order->phone = $request->get('Phone');
+        $order->latitude = $request->get('lat');
+        $order->longitude = $request->get('lng');
         $order->delivered = false;
 
         $order->save();
@@ -67,7 +76,11 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $orderlocation =  DB::table('orders')
+        ->select('latitude','longitude')
+        ->where('id','=',$id)
+        ->get();
+        return response()->json($orderlocation);
     }
 
     /**
@@ -78,7 +91,9 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        DB::table('orders')
+            ->where('id',$id)
+            ->update(['delivered' => true]);
     }
 
     /**

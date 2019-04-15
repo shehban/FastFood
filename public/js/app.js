@@ -8680,7 +8680,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\r\n    background-color: #dedeeb;\r\n    /* background-image: url('./map-waterloo.png'); */\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.row li {\r\n    list-style: none;\r\n}\r\n\r\n.float-right {\r\n    margin-right: 15%;\r\n}\r\n\r\n.back {\r\n    margin-top: 5%;\r\n}\r\n\r\n#map div:first-child {\r\n    position: static;\r\n}\r\n\r\n.container {\r\n    width: 95%;\r\n}\r\n\r\n.quantity {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 100px;\r\n}\r\n\r\n .product a{\r\n    font-size: 1em;\r\n}\r\n\r\n.product li {\r\n    text-decoration: none;\r\n}\r\n\r\n.total {\r\n    color: transparent; \r\n}\r\n\r\n#map {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    position: static;\r\n    width: 100%;\r\n    height: 500px;\r\n}\r\n\r\n.jumbotron {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./icon.png */ "./resources/js/components/icon.png")) + ");\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n    background-color: transparent;\r\n    background-position: center;\r\n    margin-top: 2%;\r\n}\r\n\r\n.btn-success {\r\n    background-color: #c92828;\r\n    border: #c92828;\r\n    color: black;   \r\n}\r\n\r\n.jumbotron h1 {\r\n    color: transparent;\r\n}\r\n\r\na {\r\n    font-size: 2em;\r\n    padding: 1%;\r\n    color: #c92828;\r\n}\r\n\r\n.fa {\r\n    color:#c92828;\r\n}\r\n\r\n.empty {\r\n    margin: 10%;\r\n}\r\n\r\n.navbar {\r\n    margin-bottom: 3%;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.login {\r\n    background-color: green;\r\n}\r\n\r\n.product {\r\n    background-color: #1a1a1d;\r\n    color: #c92828;\r\n    margin: 2%;\r\n    padding: 1%;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.footer {\r\n    padding: 2%;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .jumbotron {\r\n        color: white;\r\n    }\r\n  }", ""]);
+exports.push([module.i, "body {\r\n    background-color: #dedeeb;\r\n    /* background-image: url('./map-waterloo.png'); */\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.row li {\r\n    list-style: none;\r\n}\r\n\r\n.float-right {\r\n    margin-right: 15%;\r\n}\r\n\r\n.back {\r\n    margin-top: 5%;\r\n}\r\n\r\n#map div:first-child {\r\n    position: static;\r\n}\r\n\r\n.container {\r\n    width: 95%;\r\n}\r\n\r\n.quantity {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 100px;\r\n}\r\n\r\n .product a{\r\n    font-size: 1em;\r\n}\r\n\r\n.product li {\r\n    text-decoration: none;\r\n}\r\n\r\n.total {\r\n    color: transparent; \r\n}\r\n\r\n#map {\r\n    position: static;\r\n    width: 100%;\r\n    height: 500px;\r\n}\r\n\r\n.jumbotron {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./icon.png */ "./resources/js/components/icon.png")) + ");\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n    background-color: transparent;\r\n    background-position: center;\r\n    margin-top: 2%;\r\n}\r\n\r\n.btn-success {\r\n    background-color: #c92828;\r\n    border: #c92828;\r\n    color: black;   \r\n}\r\n\r\n.jumbotron h1 {\r\n    color: transparent;\r\n}\r\n\r\na {\r\n    font-size: 2em;\r\n    padding: 1%;\r\n    color: #c92828;\r\n}\r\n\r\n.fa {\r\n    color:#c92828;\r\n}\r\n\r\n.empty {\r\n    margin: 10%;\r\n}\r\n\r\n.navbar {\r\n    margin-bottom: 3%;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.login {\r\n    background-color: green;\r\n}\r\n\r\n.product {\r\n    background-color: #1a1a1d;\r\n    color: #c92828;\r\n    margin: 2%;\r\n    padding: 1%;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.footer {\r\n    padding: 2%;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .jumbotron {\r\n        color: white;\r\n    }\r\n  }", ""]);
 
 // exports
 
@@ -80650,9 +80650,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -80665,7 +80665,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import MapContainer from './MapContainer';
+
 
 var AllOrders =
 /*#__PURE__*/
@@ -80680,37 +80680,63 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AllOrders).call(this));
     _this.state = {
       orders: [],
-      address: []
+      address: [],
+      id: ''
     };
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    _this.edit = _this.edit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(AllOrders, [{
-    key: "geocode",
-    value: function geocode(place) {
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('https://maps.googleapis.com/maps/api/geocode/json', {
-        params: {
-          address: place,
-          key: 'AIzaSyDP4achB68q7QrNnCK4EJMTQtB59zW_WQM'
-        }
-      }).then(function (response) {
-        console.log(response);
-      }).catch(function (error) {
-        console.log(error);
+    key: "edit",
+    value: function edit() {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8080/api/order/' + this.state.id + '/edit').then(function (response) {
+        console.log(response.data);
+      }).catch(function (errors) {
+        console.log(errors);
       });
+    } //     geocode(){
+    // // geocode(place) {
+    //     // axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+    //         axios.get('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDP4achB68q7QrNnCK4EJMTQtB59zW_WQM')
+    //         .then(function(response){
+    //         console.log(response);
+    //     }).catch(function(error){
+    //         console.log(error);
+    //     })
+    // }
+    // this.setState({
+    //     someState: obj
+    // }, () => {
+    //     this.afterSetStateFinished();
+    // });
+
+  }, {
+    key: "handleClick",
+    value: function handleClick(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      this.setState({
+        id: e.target.value
+      }, function () {
+        _this2.edit();
+      });
+      location.reload();
     }
   }, {
     key: "componentWillMount",
     value: function componentWillMount() {
-      var _this2 = this;
+      var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/order').then(function (response) {
-        _this2.setState({
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/order/location').then(function (response) {
+        _this3.setState({
           orders: response.data
         });
 
-        _this2.setState({
-          address: _this2.state.orders.map(function (location) {
+        _this3.setState({
+          address: _this3.state.orders.map(function (location) {
             return location.address.replace(/ /g, '+');
           })
         });
@@ -80721,22 +80747,36 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "500px"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapContainer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        initialCenter: {
+          lat: 43.3826,
+          lng: -80.2958
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row justify-content-center"
       }, this.state.orders.map(function (product) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: product.phone,
+          key: product.id,
           className: "text-center col-md-5 product justify-content-center"
         }, "Address: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "https://www.google.com/maps/dir/?api=1&destination=" + product.address.replace(/ /g, '+'),
           target: "_blank"
         }, product.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Phone Number: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "tel:" + product.phone
-        }, product.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Name: ", product.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Order Item: ", product.productname, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Quantity: ", product.quantity, _this3.geocode(product.address));
+        }, product.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Name: ", product.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          type: "button",
+          value: product.id,
+          onClick: _this4.handleClick,
+          className: "btn btn-success"
+        }, "Set As Delivered"));
       })));
     }
   }]);
@@ -80842,6 +80882,7 @@ function (_Component) {
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8080/clear').then(function (res) {
         console.log(res.data);
       });
+      location.reload();
     }
   }, {
     key: "render",
@@ -80850,14 +80891,16 @@ function (_Component) {
       var justTheProducts = Object.values(object);
       var subtotal,
           total = 0;
+      console.log(object);
 
-      if (justTheProducts != null) {
+      if (object.length != 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "container justify-content-center"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "row"
         }, justTheProducts.map(function (product) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            key: product.name,
             className: "text-center col-md-5 product justify-content-center"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
             className: "img-fluid",
@@ -80882,16 +80925,22 @@ function (_Component) {
             type: "hidden",
             name: "productid",
             value: product.quantity
-          }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-            to: "/order"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-            className: "btn btn-success",
-            type: "submit"
-          }, "Place My Order")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+          }));
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "row"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+          to: "/order",
+          className: "btn btn-success col-sm-2"
+        }, "Place My Order"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col-sm-1"
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "btn btn-success",
+          className: "btn btn-success col-sm-2",
           onClick: this.empty
-        }, "Empty Cart"));
+        }, "Empty Cart")));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+          className: "text-center text-info"
+        }, "Your cart is empty");
       }
     }
   }]);
@@ -81201,12 +81250,12 @@ function (_React$Component) {
 /*!*************************************************!*\
   !*** ./resources/js/components/MapContainer.js ***!
   \*************************************************/
-/*! exports provided: default */
+/*! exports provided: MapContainer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MapContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapContainer", function() { return MapContainer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -81218,6 +81267,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles.css */ "./resources/js/components/styles.css");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! google-maps-react */ "./node_modules/google-maps-react/dist/index.js");
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -81243,64 +81294,89 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var style = {
+  width: "1000px",
+  height: "500px"
+};
 var MapContainer =
 /*#__PURE__*/
 function (_Component) {
   _inherits(MapContainer, _Component);
 
   function MapContainer() {
+    var _this;
+
     _classCallCheck(this, MapContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MapContainer).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MapContainer).call(this));
+    _this.state = {
+      latlng: []
+    };
+    return _this;
   }
 
   _createClass(MapContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.loadMap();
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/order/location').then(function (response) {
+        _this2.setState({
+          latlng: response.data
+        });
+      }).catch(function (errors) {
+        console.log(errors);
+      });
     }
   }, {
-    key: "loadMap",
-    value: function loadMap() {
-      loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAB5OYmLjtD731NELMcd2JbVcI8zkFikKU&callback=initMap");
-      window.initMap = this.initMap;
-    }
-  }, {
-    key: "initMap",
-    value: function initMap() {
-      var map = new window.google.maps.Map(document.getElementById('map'), {
-        center: {
-          lat: 43.3817,
-          lng: -80.3039
-        },
-        zoom: 15
-      }); // var marker = new google.maps.Marker({
-      //     position
-      // })
+    key: "onMarkerClick",
+    value: function onMarkerClick(Marker) {
+      var url = "https://www.google.com/maps/dir/?api=1&destination=" + Marker.name.replace(/ /g, '+');
+      window.open(url, '_blank');
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "map",
-        className: "justify-content-center"
-      }));
+      var _this3 = this;
+
+      var object = this.state.latlng;
+      var locations = Object.values(object);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "map"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_6__["Map"], {
+        google: this.props.google,
+        zoom: 11,
+        style: style,
+        initialCenter: {
+          lat: 43.4173,
+          lng: -80.4474
+        }
+      }, locations.map(function (order) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_6__["Marker"], {
+          key: order.id,
+          position: {
+            lat: order.latitude,
+            lng: order.longitude
+          },
+          name: order.address,
+          title: "Customer Name: " + order.name + "\nAddress: " + order.address + "\nPhone Number: " + order.phone,
+          onClick: _this3.onMarkerClick
+        });
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_6__["Marker"], {
+        onClick: this.onMarkerClick,
+        name: 'Current location',
+        title: 'Home'
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_6__["InfoWindow"], {
+        onClose: this.onInfoWindowClose
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null))));
     }
   }]);
 
   return MapContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
-
-function loadScript(url) {
-  var index = window.document.getElementsByTagName("script")[0];
-  var script = window.document.createElement("script");
-  script.src = url;
-  script.async = true;
-  script.defer = true;
-  index.parentNode.insertBefore(script, index);
-}
+/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_6__["GoogleApiWrapper"])({
+  apiKey: "AIzaSyDP4achB68q7QrNnCK4EJMTQtB59zW_WQM"
+})(MapContainer));
 
 /***/ }),
 
@@ -81374,7 +81450,8 @@ function (_React$Component) {
       Address: '',
       productid: '',
       quantity: '',
-      latlng: []
+      lat: '',
+      lng: ''
     };
     _this.Address = _this.Address.bind(_assertThisInitialized(_this));
     _this.name = _this.name.bind(_assertThisInitialized(_this));
@@ -81416,22 +81493,27 @@ function (_React$Component) {
   }, {
     key: "geocode",
     value: function geocode() {
-      axios__WEBPACK_IMPORTED_MODULE_5___default.a.get('http://127.0.0.1:8080/api/location').then(function (response) {
-        // this.setState({
-        //     latlng: response.data
-        // }).catch(errors => {
-        //     console.log(errors);
-        // })
-        console.log(response.data.results[0].geometry.location);
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("/api/location/" + this.state.Address.replace(/ /g, '+')).then(function (response) {
+        _this2.setState({
+          lat: response.data.results[0].geometry.location.lat,
+          lng: response.data.results[0].geometry.location.lng
+        });
+
+        console.log(_this2.state);
+      }).catch(function (errors) {
+        console.log(errors);
+        console.log(response.data.results[0].geometry.location.lat);
       });
     }
   }, {
     key: "componentWillMount",
     value: function componentWillMount() {
-      var _this2 = this;
+      var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_5___default.a.get('http://127.0.0.1:8080/cart').then(function (response) {
-        _this2.setState({
+        _this3.setState({
           cartp: response.data
         });
       }).catch(function (errors) {
@@ -81447,16 +81529,11 @@ function (_React$Component) {
       }).then(function (error) {
         console.log(error);
       });
-      axios__WEBPACK_IMPORTED_MODULE_5___default.a.post('/api/orderitems', this.state).then(function (response) {
-        console.log(response);
-      }).then(function (error) {
-        console.log(error);
-      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var object = this.state.cartp;
       var user = globalData;
@@ -81464,6 +81541,7 @@ function (_React$Component) {
       var justTheProducts = Object.values(object);
       var subtotal,
           total = 0;
+      var defaultBounds = new google.maps.LatLngBounds(new google.maps.LatLng(43.3477, -80.2032), new google.maps.LatLng(43.4814, -80.6149));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container justify-content-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -81484,9 +81562,7 @@ function (_React$Component) {
         className: "col-sm-12 text-center"
       }, "Total: $", total.toFixed(2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "col-sm-12 text-center"
-      }, "Approximate delivery time: ~45mins"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Order Page"), console.log(parseInt(justTheProducts.map(function (product) {
-        return product.id;
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Approximate delivery time: ~45mins"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Order Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group row"
@@ -81517,22 +81593,21 @@ function (_React$Component) {
           width: '100%'
         },
         onPlaceSelected: function onPlaceSelected(place) {
-          _this3.Address(place.formatted_address, userdetails[0].id);
+          _this4.Address(place.formatted_address, userdetails[0].id);
 
-          _this3.productdetails(parseInt(justTheProducts.map(function (product) {
+          _this4.productdetails(parseInt(justTheProducts.map(function (product) {
             return product.id;
           })), parseInt(justTheProducts.map(function (product) {
             return product.quantity;
           })));
 
-          _this3.geocode();
-
-          console.log(_this3.state);
+          _this4.geocode();
         },
         types: ['address'],
         componentRestrictions: {
           country: "ca"
         },
+        bounds: new google.maps.LatLngBounds(new google.maps.LatLng(43.3741, -80.5966), new google.maps.LatLng(43.5070, -80.2823)),
         className: "col-sm-4"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
@@ -81738,6 +81813,7 @@ function (_Component) {
         id: this.state.id
       }).then(function (res) {
         console.log(res.data);
+        location.reload();
       });
     }
   }, {

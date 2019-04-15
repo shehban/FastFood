@@ -4,43 +4,60 @@ import axios from 'axios';
 import { get } from 'http';
 import './styles.css';
 import {HashRouter as Router, Link, Route} from 'react-router-dom';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+ 
+const style = {
+    width: "1000px",
+    height: "500px",
+}
 
-export default class MapContainer extends Component {
-
-    componentDidMount() {
-        this.loadMap()
+export class MapContainer extends Component {
+    constructor() {
+        super();
+        this.state= {
+            latlng: []
+        }
     }
 
-    loadMap() {
-        loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAB5OYmLjtD731NELMcd2JbVcI8zkFikKU&callback=initMap")
-        window.initMap = this.initMap
+    componentWillMount() {
+        axios.get('/order/location').then(response => {
+            this.setState({
+                latlng: response.data
+            });
+        }).catch(errors => {
+            console.log(errors);
+        })
     }
 
-    initMap() {
-        var map = new window.google.maps.Map(document.getElementById('map'), {
-          center: {lat: 43.3817, lng: -80.3039},
-          zoom: 15
-        });
-
-        // var marker = new google.maps.Marker({
-        //     position
-        // })
+    onMarkerClick(Marker) {
+    var url = "https://www.google.com/maps/dir/?api=1&destination=" + Marker.name.replace(/ /g, '+')
+      window.open(url,'_blank')
       }
 
-    render() {
-        return (
-            <main>
-                <div id="map" className="justify-content-center"></div>
-            </main>
-        )
-    }
+  render() {
+    var object = this.state.latlng
+    var locations = Object.values(object)
+    return (
+        <div id="map">
+      <Map google={this.props.google} zoom={11} style={style} initialCenter={{lat: 43.4173,lng:-80.4474}}>
+      {locations.map(order => <Marker key={order.id} position={{lat:order.latitude, lng: order.longitude}} name={order.address} title={"Customer Name: " + order.name + "\nAddress: " 
+      + order.address + "\nPhone Number: " + order.phone} onClick={this.onMarkerClick}></Marker>
+      
+               )}
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} title={'Home'}
+                />
+    <InfoWindow onClose={this.onInfoWindowClose}>
+            <div>
+            
+            </div>
+        </InfoWindow>
+      </Map>
+      </div>
+    );
+  }
 }
-
-function loadScript(url) {
-    var index = window.document.getElementsByTagName("script")[0]
-    var script = window.document.createElement("script")
-    script.src = url
-    script.async = true
-    script.defer = true
-    index.parentNode.insertBefore(script,index)
-}
+ 
+export default GoogleApiWrapper({
+  apiKey: ("AIzaSyDP4achB68q7QrNnCK4EJMTQtB59zW_WQM")
+})(MapContainer)
