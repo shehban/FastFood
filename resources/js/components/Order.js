@@ -73,7 +73,7 @@ export default class Order extends React.Component {
 
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8080/cart').then(response => {
+        axios.get('http://floating-sea-60480.herokuapp.com/cart').then(response => {
             this.setState({
                 cartp: response.data
             });
@@ -96,7 +96,7 @@ export default class Order extends React.Component {
         }).then(error => {
             console.log(error);
         });
-        axios.get('http://127.0.0.1:8080/clear').then(response => {
+        axios.get('/clear').then(response => {
             this.setState({
                 cartp: response.data
             });
@@ -104,7 +104,7 @@ export default class Order extends React.Component {
             console.log(errors);
         })
         setTimeout(function() {
-            window.location.assign("http://127.0.0.1:8080/#/thanks");
+            window.location.assign("http://floating-sea-60480.herokuapp.com/#/thanks");
         },4000)
     }
     else{

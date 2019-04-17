@@ -17,7 +17,7 @@ export default class Cart extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8080/cart').then(response => {
+        axios.get('http://floating-sea-60480.herokuapp.com/cart').then(response => {
             this.setState({
                 cartp: response.data
             });
@@ -34,7 +34,7 @@ export default class Cart extends Component {
 
     empty(e) {
         // e.preventDefault();
-        axios.get('http://127.0.0.1:8080/clear').then(res=>{
+        axios.get('http://floating-sea-60480.herokuapp.com/clear').then(res=>{
             console.log(res.data);
         });
         location.reload()
