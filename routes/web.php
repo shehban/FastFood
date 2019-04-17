@@ -20,6 +20,12 @@
 
 Route::get('order/location', 'Api\OrderController@getorderlocations');
 
+Route::get('order/myorders','Api\OrderController@getMyOrders');
+
+Route::get('order/timediff','Api\OrderController@gettime');
+
+Route::get('order/highestorder','api\OrderController@highestorder');
+
 Route::get('products', function() {
     return App\product::all();
 });

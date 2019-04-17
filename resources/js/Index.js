@@ -12,6 +12,8 @@ import Login from './components/Login';
 import ProductListing from './components/ProductListing';
 import Cart from './components/Cart';
 import AllOrders from './components/AllOrders';
+import MyOrders from './components/MyOrders';
+import Thanks from './components/Thanks';
 
 export default class Index extends Component {
     render() {
@@ -20,9 +22,12 @@ export default class Index extends Component {
 
              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <Router>
-                        <Link to="/">Home</Link>
-                        <Link to="/products">Products</Link>
+                    <div className="nav">
+                        <Link to="/" className="nav-item">Home</Link>
+                        <Link to="/products" className="nav-item">Products</Link>
+                        <Link to="/myorders" className="nav-item">My Orders</Link>
                         <Link to="/cart"><i className="fa fa-shopping-cart"></i></Link>
+                        </div>
                         <div className="back justify-content-center">
                         <Route path="/" exact component={Home}></Route>
                         <Route path="/order" exact component={Order}></Route>
@@ -30,6 +35,8 @@ export default class Index extends Component {
                         <Route path="/product/:id" exact render={props => <ProductListing{...props} /> }></Route>
                         <Route path="/cart" async exact component={Cart}></Route>
                         <Route path="/allorders" exact component={AllOrders}></Route>
+                        <Route path="/myorders" exact component={MyOrders}></Route>
+                        <Route path="/thanks" exact component={Thanks}></Route>
                         {/* <Route path="/map" exact component={MapContainer}></Route> */}
                         </div>
                 </Router>

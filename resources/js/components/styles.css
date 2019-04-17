@@ -42,6 +42,10 @@ body {
     color: transparent; 
 }
 
+.ordered {
+    margin-bottom: 0;
+}
+
 #map {
     position: static;
     width: 100%;
@@ -58,9 +62,15 @@ body {
 }
 
 .btn-success {
-    background-color: #c92828;
-    border: #c92828;
     color: black;   
+}
+
+.nav-item {
+    color:#c92828;
+}
+
+.nav-item a{
+    color:#c92828;
 }
 
 .jumbotron h1 {
@@ -70,7 +80,7 @@ body {
 a {
     font-size: 2em;
     padding: 1%;
-    color: #c92828;
+    color: #ffffff;
 }
 
 .fa {
@@ -92,7 +102,7 @@ a {
 
 .product {
     background-color: #1a1a1d;
-    color: #c92828;
+    color: #ffffff;
     margin: 2%;
     padding: 1%;
     font-size: 1.2em;

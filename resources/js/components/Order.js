@@ -39,6 +39,7 @@ export default class Order extends React.Component {
     }
 
     name(e) {
+        console.log(e.target.value)
         this.setState({
             name: e.target.value
         });
@@ -83,11 +84,34 @@ export default class Order extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        if(this.state.name != null && this.state.Phone !=null && this.state.Address != null)
+        {
         axios.post('/api/order', this.state).then(response => {
             console.log(response);
         }).then(error => {
             console.log(error);
         });
+        axios.post('/api/orderitems', this.state).then(response => {
+            console.log(response);
+        }).then(error => {
+            console.log(error);
+        });
+        axios.get('http://127.0.0.1:8080/clear').then(response => {
+            this.setState({
+                cartp: response.data
+            });
+        }).catch(errors => {
+            console.log(errors);
+        })
+        setTimeout(function() {
+            window.location.assign("http://127.0.0.1:8080/#/thanks");
+        },4000)
+    }
+    else{
+        return(
+         "Enter everything"   
+        )
+    }
     }
   
   render() {
@@ -96,9 +120,6 @@ export default class Order extends React.Component {
     var userdetails = Object.values(user);
     var justTheProducts = Object.values(object);
     var subtotal, total = 0;
-    var defaultBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(43.3477, -80.2032),
-        new google.maps.LatLng(43.4814, -80.6149));
     return (
         <div className="container justify-content-center">
              <div className="container justify-content-center">
@@ -115,7 +136,7 @@ export default class Order extends React.Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group row">
                 <label className="label col-sm-2">Name: </label>
-                <input type="text" name="name" className="col-sm-4" onChange={this.name} value={this.state.name}></input></div>
+                <input type="text" name="name" className="col-sm-4" onChange={this.name}></input></div>
                 <div className="form-group row">
                 <label className="txt-info col-sm-2">Phone Number: </label>
                 <input className="col-sm-4" type="number" name="tel" onChange={this.Phone} value={this.state.Phone}></input></div>
