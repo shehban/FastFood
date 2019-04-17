@@ -74,16 +74,24 @@ export default class AllOrders extends Component {
     }
 
     async componentDidMount() {
-        await axios.get('/order/location').then(response => {
-            this.setState({
-                orders: response.data
-            });
-            this.setState({
-                address: this.state.orders.map(location => location.address.replace(/ /g, '+'))
-            })
-        }).catch(errors => {
-            console.log(errors);
-        })
+        let response = await axios.get('/order/location');
+        let data = await response.data;
+        await this.setState({
+                     orders: data
+                });
+              await this.setState({
+                     address: this.state.orders.map(location => location.address.replace(/ /g, '+'))
+                    })
+        // await axios.get('/order/location').then(response => {
+        //     this.setState({
+        //         orders: response.data
+        //     });
+        //     this.setState({
+        //         address: this.state.orders.map(location => location.address.replace(/ /g, '+'))
+        //     })
+        // }).catch(errors => {
+        //     console.log(errors);
+        // })
     }
     render() {  
         return (

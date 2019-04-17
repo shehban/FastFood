@@ -81567,33 +81567,40 @@ function (_Component) {
       var _componentDidMount = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _this3 = this;
-
+        var response, data;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/order/location').then(function (response) {
-                  _this3.setState({
-                    orders: response.data
-                  });
-
-                  _this3.setState({
-                    address: _this3.state.orders.map(function (location) {
-                      return location.address.replace(/ /g, '+');
-                    })
-                  });
-                }).catch(function (errors) {
-                  console.log(errors);
-                });
+                return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/order/location');
 
               case 2:
+                response = _context.sent;
+                _context.next = 5;
+                return response.data;
+
+              case 5:
+                data = _context.sent;
+                _context.next = 8;
+                return this.setState({
+                  orders: data
+                });
+
+              case 8:
+                _context.next = 10;
+                return this.setState({
+                  address: this.state.orders.map(function (location) {
+                    return location.address.replace(/ /g, '+');
+                  })
+                });
+
+              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee);
+        }, _callee, this);
       }));
 
       function componentDidMount() {
@@ -81605,7 +81612,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
+      var _this3 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "container"
@@ -81629,10 +81636,10 @@ function (_Component) {
           target: "_blank"
         }, product.address), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Phone Number: ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
           href: "tel:" + product.phone
-        }, product.phone), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Name: ", product.customer_name, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), _this4.timediff(product.time_diff), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        }, product.phone), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Name: ", product.customer_name, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), _this3.timediff(product.time_diff), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "button",
           value: product.id,
-          onClick: _this4.handleClick,
+          onClick: _this3.handleClick,
           className: "btn btn-success"
         }, "Set As Delivered"));
       })));
